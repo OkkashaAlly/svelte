@@ -5,6 +5,8 @@
   const disabled = false;
   const status = "success";
   const promoted = true;
+
+  let number = 0;
 </script>
 
 <main>
@@ -15,6 +17,16 @@
   <div>{@html profession}</div>
   <p id={paragraphID}>Paragraph</p>
   <button {disabled}>Bind</button>
+
+  {#if number === 0}
+    <h1>The number is zero</h1>
+  {:else if number > 0}
+    <h1>The number is positive</h1>
+  {:else if number < 0}
+    <h1>The number is negative</h1>
+  {:else}
+    <h1>Is not a number</h1>
+  {/if}
 </main>
 
 <style>

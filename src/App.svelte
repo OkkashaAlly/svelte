@@ -16,7 +16,7 @@
 </script>
 
 <main>
-  {#each names as name, index}
+  {#each names as name, index (name.first)}
     <h2>{index +1 }: {name.first}  {name.last}</h2>
   {/each}
   

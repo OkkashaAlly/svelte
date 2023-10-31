@@ -7,9 +7,20 @@
   const promoted = true;
 
   let number = 0;
+
+  const names = [
+    { first: "Okkasha", last: "Ally" },
+    { first: "Ismail", last: "Mbarouk" },
+  ];
+  
 </script>
 
 <main>
+  {#each names as name, index}
+    <h2>{index +1 }: {name.first}  {name.last}</h2>
+  {/each}
+  
+  
   <h2 class={status}>status</h2>
   <!-- <p class:promoted={isPromoted}>movie name</p> -->
   <p class:promoted>movie name</p>

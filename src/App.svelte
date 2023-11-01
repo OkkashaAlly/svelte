@@ -1,20 +1,19 @@
 <script>
-  import { setContext } from "svelte";
-  import ChildA from "./components/ChildA.svelte";
+  import Popup from "./components/Popup.svelte";
 
-  
-  const person = {
-    name: "Okkasha",
-    heroName: "ProFrontEnd Dev",
+  let showPopup = false;
+
+  const closePopup = event => {
+    showPopup = false;
+    console.log(event.detail);
   };
-  
-  setContext("person-details", person)
 </script>
 
 <main>
-  <h1>App component</h1>
-  <h2>Hello - {person.name}</h2>
-  <ChildA/>
+  <button on:click={() => (showPopup = true)}>show Popup</button>
+  {#if showPopup}
+    <Popup on:close={closePopup} />
+  {/if}
 </main>
 
 <style>

@@ -1,19 +1,20 @@
 <script>
-  import Greet from "./components/Greet.svelte";
+  import { setContext } from "svelte";
+  import ChildA from "./components/ChildA.svelte";
 
-  const name = "suma";
-
+  
   const person = {
-    name: "chatter",
-    heroName: "blockchain dev",
+    name: "Okkasha",
+    heroName: "ProFrontEnd Dev",
   };
+  
+  setContext("person-details", person)
 </script>
 
 <main>
-  <Greet name="Okkasha" heroName="ProFrontEnd Dev" />
-  <Greet name="Brian" heroName="Desinger Dev" />
-  <Greet {name} />
-  <Greet {...person} />
+  <h1>App component</h1>
+  <h2>Hello - {person.name}</h2>
+  <ChildA/>
 </main>
 
 <style>

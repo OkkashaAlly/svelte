@@ -1,5 +1,6 @@
 <script>
-  import Popup from "./components/Popup.svelte";
+  import Button from "./components/Button.svelte";
+  import Outer from "./components/Outer.svelte";
 
   let showPopup = false;
 
@@ -10,10 +11,8 @@
 </script>
 
 <main>
-  <button on:click={() => (showPopup = true)}>show Popup</button>
-  {#if showPopup}
-    <Popup on:close={closePopup} />
-  {/if}
+  <Outer on:greet={event => alert(`Hello ${event.detail}`)} />
+  <Button on:click={() => alert("Clicked")} />
 </main>
 
 <style>

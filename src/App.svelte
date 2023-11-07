@@ -1,14 +1,12 @@
 <script>
-  import ChildStyle from "./components/ChildStyle.svelte";
-  import PostList from "./components/PostList.svelte";
+  import AutoFocus from "./components/AutoFocus.svelte";
 </script>
 
 <main>
-  <PostList/>
+  <AutoFocus />
 </main>
 
 <style>
-
   :global(h3) {
     color: red;
   }

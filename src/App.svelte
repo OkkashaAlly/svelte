@@ -1,7 +1,5 @@
 <script>
-  import Button from "./components/Button.svelte";
-  import Card from "./components/Card.svelte";
-  import Outer from "./components/Outer.svelte";
+  import NameList from "./components/NameList.svelte";
 
   let showPopup = false;
 
@@ -12,11 +10,12 @@
 </script>
 
 <main>
-  <Card>
-    <div slot="header">Header</div>
-    <div slot="content">Content</div>
-    <!-- <div slot="footer">Footer</div> -->
-  </Card>
+  <NameList>
+    <h3 slot="hero" let:firstName let:lastName>{firstName} {lastName}</h3>
+  </NameList>
+  <NameList>
+    <h3 slot="hero" let:firstName>{firstName}</h3>
+  </NameList>
 </main>
 
 <style>

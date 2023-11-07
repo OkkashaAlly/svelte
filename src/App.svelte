@@ -12,9 +12,11 @@
 </script>
 
 <main>
-  <Card>Hello</Card>
-  <Card><h2>Hello</h2></Card>
-  <Card/>
+  <Card>
+    <div slot="header">Header</div>
+    <div slot="content">Content</div>
+    <!-- <div slot="footer">Footer</div> -->
+  </Card>
 </main>
 
 <style>

@@ -1,5 +1,6 @@
 <script>
   import Button from "./components/Button.svelte";
+  import Card from "./components/Card.svelte";
   import Outer from "./components/Outer.svelte";
 
   let showPopup = false;
@@ -11,8 +12,9 @@
 </script>
 
 <main>
-  <Outer on:greet={event => alert(`Hello ${event.detail}`)} />
-  <Button on:click={() => alert("Clicked")} />
+  <Card>Hello</Card>
+  <Card><h2>Hello</h2></Card>
+  <Card/>
 </main>
 
 <style>

@@ -7,11 +7,8 @@
 </script>
 
 <main>
-  <Time/>
   <Display />
-  <Increment />
-  <Decrement />
-  <Reset />
+  
 </main>
 
 <style>

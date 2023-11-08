@@ -1,14 +1,15 @@
 <script>
-  import Counter, { getTotalCount } from "./components/Counter.svelte";
-
-  const alertTotalCount = () => alert(getTotalCount());
+  import Decrement from "./components/Decrement.svelte";
+  import Display from "./components/Display.svelte";
+  import Increment from "./components/Increment.svelte";
+  import Reset from "./components/Reset.svelte";
 </script>
 
 <main>
-  <button on:click={alertTotalCount}>alert total count</button>
-  <Counter />
-  <Counter />
-  <Counter />
+  <Display />
+  <Increment />
+  <Decrement />
+  <Reset />
 </main>
 
 <style>
